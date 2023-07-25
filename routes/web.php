@@ -38,4 +38,12 @@ Route::get('/log/show/{id}', [LogController :: class, 'show'])
     ->middleware(['auth', 'verified'])
     ->name('log.show');
 
+Route::post('/store', [LogController :: class, 'store'])
+->middleware(['auth', 'verified'])
+->name('log.store');
+
+Route::get('/create', [LogController :: class, 'create'])
+->middleware(['auth', 'verified'])
+->name('log.create');
+
 require __DIR__.'/auth.php';

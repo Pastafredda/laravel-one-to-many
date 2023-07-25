@@ -3,11 +3,12 @@
 @section('content')
     <ul>
 
-        <li>{{ $book->author }}</li>
-        <li>{{ $book->price }}</li>
-        <li>{{ $book->plot }}</li>
-        <li>{{ $book->editor }}</li>
-        <li>{{ $book->is_available }}</li>
+        <li> autore:{{ $book->author }}</li>
+        <li>prezzo:{{ $book->price }}</li>
+        <li>trama:{{ $book->plot }}</li>
+        <li>editore:{{ $book->editor }}</li>
+        <li>genere:{{ $book->type->name }}</li>
+        <li>disponibilità:{{ $book->is_available }}</li>
 
     </ul>
 @endsection
